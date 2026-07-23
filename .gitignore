@@ -1,0 +1,46 @@
+# See https://help.github.com/articles/ignoring-files
+
+# Bundler
+/.bundle
+/vendor/bundle
+
+# Environment variables
+/.env*
+!/.env.example
+
+# Logs and temporary files
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+
+# PID files
+/tmp/pids/*
+!/tmp/pids/
+!/tmp/pids/.keep
+
+# Storage
+/storage/*
+!/storage/.keep
+
+/tmp/storage/*
+!/tmp/storage/
+!/tmp/storage/.keep
+
+# Rails credentials
+/config/master.key
+
+# Test coverage
+/coverage
+
+# IDEs
+.idea/
+.vscode/
+*.iml
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Debug
+.byebug_history
