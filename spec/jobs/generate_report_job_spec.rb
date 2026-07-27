@@ -6,11 +6,11 @@ RSpec.describe GenerateReportJob do
       report_request = ReportRequest.create!(status: :pending)
 
       generator = instance_double(
-        ReportRequests::RespostaPostbackGenerator
+        ReportRequests::BaseGenerator
       )
 
-      allow(ReportRequests::RespostaPostbackGenerator)
-        .to receive(:new)
+      allow(ReportRequests::GeneratorFactory)
+        .to receive(:call)
               .with(report_request)
               .and_return(generator)
 

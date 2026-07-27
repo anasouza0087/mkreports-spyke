@@ -2,7 +2,6 @@
 
 module ReportRequests
   class BaseGenerator
-    attr_reader :report_request
 
     def initialize(report_request)
       @report_request = report_request
@@ -11,5 +10,9 @@ module ReportRequests
     def generate
       raise NotImplementedError
     end
+
+    private
+
+    attr_reader :report_request
   end
 end

@@ -6,7 +6,7 @@ class GenerateReportJob
   def perform(report_request_id)
     report_request = ReportRequest.find(report_request_id)
 
-    generator = ReportRequests::RespostaPostbackGenerator.new(report_request)
+    generator = ReportRequests::GeneratorFactory.call(report_request)
 
     generator.generate
   end

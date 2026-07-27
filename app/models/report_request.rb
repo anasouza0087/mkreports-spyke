@@ -6,4 +6,10 @@ class ReportRequest < ApplicationRecord
          completed: 2,
          error: 3
        }
+
+  enum :report_type, {
+    postback_response: 0,
+    click: 1
+  }
+
 end
