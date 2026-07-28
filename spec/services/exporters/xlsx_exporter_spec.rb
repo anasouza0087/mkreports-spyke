@@ -14,6 +14,5 @@ RSpec.describe Exporters::XlsxExporter do
       expect(File.exist?(path)).to be true
       expect(path).to end_with(".xlsx")
     end
-
   end
 end

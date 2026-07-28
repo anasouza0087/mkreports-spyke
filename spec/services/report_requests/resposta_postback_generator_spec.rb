@@ -36,10 +36,6 @@ RSpec.describe ReportRequests::RespostaPostbackGenerator do
       expect(exporter)
         .to have_received(:generate)
               .with(report_request)
-
     end
-
   end
-
 end
-

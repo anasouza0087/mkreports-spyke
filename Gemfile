@@ -45,6 +45,10 @@ group :development, :test do
   gem "factory_bot_rails"
   gem "caxlsx"
 
+  gem "rswag-api"
+  gem "rswag-ui"
+  gem "rswag-specs"
+
   gem "simplecov", require: false
 
   # Static analysis for security vulnerabilities [https://brakemanscanner.org/]

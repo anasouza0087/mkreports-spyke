@@ -21,4 +21,3 @@ class ReportRequestsController < ApplicationController
     params.permit(:report_type, :file_format)
   end
 end
-

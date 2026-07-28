@@ -15,8 +15,8 @@ module Exporters
 
       CSV.open(path, "w") do |csv|
         csv << %w[ID Nome Telefone]
-        csv << [1, "João", "11999999999"]
-        csv << [2, "Maria", "11888888888"]
+        csv << [ 1, "João", "11999999999" ]
+        csv << [ 2, "Maria", "11888888888" ]
       end
       path.to_s
     end

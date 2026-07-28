@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 module ReportRequests
   class GeneratorFactory
     def self.call(report_request)

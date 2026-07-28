@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 module Exporters
   class ExporterFactory
     def self.call(report_request)

@@ -16,5 +16,4 @@ class ReportRequest < ApplicationRecord
     csv: 0,
     xlsx: 1
   }
-
 end

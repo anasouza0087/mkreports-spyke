@@ -1,0 +1,65 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/report_requests":
+    post:
+      summary: Creates a report request
+      tags:
+      - Report Requests
+      parameters: []
+      responses:
+        '201':
+          description: report created
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  status:
+                    type: string
+                  report_type:
+                    type: string
+                  file_format:
+                    type: string
+                  file_path:
+                    type: string
+                    nullable: true
+                  created_at:
+                    type: string
+                    format: date-time
+                  updated_at:
+                    type: string
+                    format: date-time
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                report_type:
+                  type: string
+                  enum:
+                  - postback_response
+                  - click
+                file_format:
+                  type: string
+                  enum:
+                  - csv
+                  - xlsx
+              required:
+              - report_type
+              - file_format
+    get:
+      summary: Lists report requests
+      tags:
+      - Report Requests
+      responses:
+        '200':
+          description: list of report requests
+servers:
+- url: http://localhost:3000

@@ -2,7 +2,6 @@
 
 module ReportRequests
   class BaseGenerator
-
     def initialize(report_request)
       @report_request = report_request
     end
