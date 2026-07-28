@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2026_07_27_211514) do
+ActiveRecord::Schema[8.0].define(version: 2026_07_28_152122) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -24,5 +24,7 @@ ActiveRecord::Schema[8.0].define(version: 2026_07_27_211514) do
     t.datetime "updated_at", null: false
     t.integer "status", default: 0, null: false
     t.integer "report_type"
+    t.integer "file_format"
+    t.string "file_path"
   end
 end

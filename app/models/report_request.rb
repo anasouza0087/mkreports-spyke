@@ -12,4 +12,9 @@ class ReportRequest < ApplicationRecord
     click: 1
   }
 
+  enum :file_format, {
+    csv: 0,
+    xlsx: 1
+  }
+
 end

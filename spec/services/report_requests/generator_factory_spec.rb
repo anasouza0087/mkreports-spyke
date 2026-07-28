@@ -7,7 +7,8 @@ RSpec.describe ReportRequests::GeneratorFactory do
     it 'returns postback generator' do
       report_request = ReportRequest.create!(
         status: :pending,
-        report_type: :postback_response
+        report_type: :postback_response,
+      file_format: :csv,
       )
 
       generator = described_class.call(report_request)
